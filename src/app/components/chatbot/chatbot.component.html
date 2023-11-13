@@ -1,0 +1,27 @@
+<div class="page-container">
+  <div class="page__title-chat">
+    <span>Chat using OpenAI API [text chat]</span>
+  </div>
+
+  <div class="chat-container">
+    <div *ngFor="let message of chatMessages" [ngClass]="message.role">
+      {{ message.content }}
+    </div>
+  </div>
+
+  <div class="input-container">
+
+      <input (keypress)="submitViaKeypress($event)" [(ngModel)]="userMessage" placeholder="Enter your message" />
+      <button
+        class="btn btn-sm btn-primary"
+        (click)="sendMessage()"
+      >Send</button>
+      <button
+        class="btn btn-sm btn-secondary"
+        (click)="resetWindow()"
+      >Clear</button>
+
+
+  </div>
+</div>
+

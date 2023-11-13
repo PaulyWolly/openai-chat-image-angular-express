@@ -1,0 +1,11 @@
+.w-quarter {
+  height: 300px;
+  width: 300px;
+  padding-right: 10px;
+}
+
+.align-center {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
